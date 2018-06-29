@@ -1,6 +1,6 @@
-# mintshop
+# mintshop-client
 
-> A Vue.js project
+> Mintshop client project
 
 ## Build Setup
 

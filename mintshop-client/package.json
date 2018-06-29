@@ -1,7 +1,7 @@
 {
   "name": "mintshop-client",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Mintshop client project",
   "author": "W-Qing <scorpio971028@gmail.com>",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
