@@ -1,10 +1,11 @@
 <template>
-  <div>App vue template</div>
+  <div>Order vue template</div>
 </template>
 
 <script>
-export default {}
+  export default {}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+
 </style>
