@@ -1,7 +1,7 @@
 <template>
   <section class="msite">
     <!--首页头部title-->
-    <header class="msite_header">
+    <header class="header">
       <span class="header_search">
         <i class="iconfont icon-sousuo"></i>
       </span>
@@ -160,7 +160,7 @@
                     </div>
                   </section>
                   <section class="shop_rating_order_right">
-                    <span class="delivery_style delivery_right">硅谷专送</span>
+                    <span class="delivery_style delivery_right">Mint专送</span>
                   </section>
                 </section>
                 <section class="shop_distance">
@@ -204,7 +204,7 @@
                     </div>
                   </section>
                   <section class="shop_rating_order_right">
-                    <span class="delivery_style delivery_right">硅谷专送</span>
+                    <span class="delivery_style delivery_right">Mint专送</span>
                   </section>
                 </section>
                 <section class="shop_distance">
@@ -248,7 +248,7 @@
                     </div>
                   </section>
                   <section class="shop_rating_order_right">
-                    <span class="delivery_style delivery_right">硅谷专送</span>
+                    <span class="delivery_style delivery_right">Mint专送</span>
                   </section>
                 </section>
                 <section class="shop_distance">
@@ -292,7 +292,7 @@
                     </div>
                   </section>
                   <section class="shop_rating_order_right">
-                    <span class="delivery_style delivery_right">硅谷专送</span>
+                    <span class="delivery_style delivery_right">Mint专送</span>
                   </section>
                 </section>
                 <section class="shop_distance">
@@ -319,7 +319,7 @@ export default {}
   @import "../../common/stylus/mixins.styl"
   .msite  //首页
     width 100%
-    .msite_header
+    .header
       background-color #02a774
       position fixed
       z-index 100
