@@ -1,17 +1,18 @@
 <template>
   <section class="msite">
-    <!--首页头部title-->
-    <header class="header">
-      <span class="header_search">
+    <!-- 首页头部title -->
+    <!-- 使用 :title 来给头部组件传递数据 -->
+    <HeaderTop title="芝罘区鲁东大学北区(青年南路)">
+      <!-- 要使用slot="left"指定插入的插槽位置 -->
+      <span class="header_search" slot="left">
         <i class="iconfont icon-sousuo"></i>
       </span>
-      <span class="header_title">
-        <span class="header_title_text ellipsis">芝罘区鲁东大学北区(青年南路)</span>
+      <span class="header_login" slot="right">
+        <span class="header_login_text">
+          登录|注册
+        </span>
       </span>
-      <span class="header_login">
-        <span class="header_login_text">登录|注册</span>
-      </span>
-    </header>
+    </HeaderTop>
     <!--首页导航轮播图-->
     <nav class="msite_nav">
       <div class="swiper-container">
@@ -312,7 +313,12 @@
 </template>
 
 <script>
-export default {}
+import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
+export default {
+  components: {
+    HeaderTop
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
