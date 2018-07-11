@@ -10,3 +10,10 @@
 ## 2. 项目功能界面
 
 ![Msite首页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Msite.png)![Search搜索页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Search.png)![Order订单页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Order.png)![Profile个人页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Profile.png)
+
+## 3. 技术选型
+
+## 4.前端路由
+
+## 5. API接口
+
