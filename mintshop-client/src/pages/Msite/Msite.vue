@@ -15,8 +15,11 @@
     </HeaderTop>
     <!--首页导航轮播图-->
     <nav class="msite_nav">
+      <!-- swiper的容器div -->
       <div class="swiper-container">
+        <!-- swiper的包裹层div -->
         <div class="swiper-wrapper">
+          <!-- swiper的轮播div -->
           <div class="swiper-slide">
             <a href="javascript:" class="link_to_food">
               <div class="food_container">
@@ -118,7 +121,7 @@
             </a>
           </div>
         </div>
-        <!-- 轮播图页码 -->
+        <!-- swiper轮播图圆点 -->
         <div class="swiper-pagination"></div>
       </div>
     </nav>
@@ -314,9 +317,24 @@
 
 <script>
 import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
+import Swiper from 'swiper'
+// 同时引入swiper的css文件
+import 'swiper//dist/css/swiper.min.css'
 export default {
   components: {
     HeaderTop
+  },
+  // 注意要在页面加载完成之后（mounted）再进行swiper的初始化
+  mounted () {
+    // 创建一个swiper实例来实现轮播
+    new Swiper('.swiper-container', {
+      autoplay: true,
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    })
   }
 }
 </script>
