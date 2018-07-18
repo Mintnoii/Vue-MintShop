@@ -8,6 +8,7 @@ import Msite from '../pages/Msite/Msite.vue'
 import Search from '../pages/Search/Search.vue'
 import Order from '../pages/Order/Order.vue'
 import Profile from '../pages/Profile/Profile.vue'
+import Login from '../pages/Login/Login'
 // 全局注册Vue-router组件
 Vue.use(VueRouter)
 
@@ -34,6 +35,10 @@ export default new VueRouter({
   {
     path: '/profile',
     component: Profile
+  },
+  {
+    path: '/Login',
+    component: Login
   }
   ]
 })

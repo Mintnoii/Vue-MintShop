@@ -3,7 +3,7 @@
     <section class="profile">
       <HeaderTop title="我的"></HeaderTop>
       <section class="profile-number">
-        <a href="javascript:" class="profile-link">
+        <router-link to="/Login" class="profile-link">
           <div class="profile_image">
             <i class="iconfont icon-yonghuming"></i>
           </div>
@@ -19,7 +19,7 @@
           <span class="arrow">
             <i class="iconfont icon-previewright"></i>
           </span>
-        </a>
+        </router-link>
       </section>
       <section class="profile_info_data border-1px">
         <ul class="info_data_list">
@@ -106,6 +106,7 @@ export default {
   @import "../../common/stylus/mixins.styl"
   .profile
     width 100%
+    overflow hidden
     .header //头部公共css
       background-color #02a774
       position fixed
