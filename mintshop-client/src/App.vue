@@ -4,7 +4,7 @@
     <!-- 设置路由组件的视图位置 -->
     <router-view></router-view>
     <!-- 并放置非路由组件 -->
-    <FooterGuide></FooterGuide>
+    <FooterGuide v-show="$route.meta.showFooter"></FooterGuide>
   </div>
 </template>
 
