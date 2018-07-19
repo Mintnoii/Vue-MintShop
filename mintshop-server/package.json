@@ -1,0 +1,26 @@
+{
+  "name": "mintshop_server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "blueimp-md5": "^2.10.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "js-base64": "^2.4.3",
+    "moment": "^2.21.0",
+    "mongoose": "^5.0.8",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.1",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.4.5",
+    "svg-captcha": "^1.3.11"
+  }
+}

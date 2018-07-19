@@ -45,6 +45,7 @@
         </form>
         <a href="javascript:;" class="about_us">关于我们</a>
       </div>
+      <!--利用$router.back()返回上一级路由 -->
       <a href="javascript:" class="go_back" @click="$router.back()">
         <i class="iconfont icon-arrow-left"></i>
       </a>

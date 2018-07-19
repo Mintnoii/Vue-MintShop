@@ -1,0 +1,7 @@
+docs/
+bin/
+test/triage/
+test/model.discriminator.test.js
+tools/
+test/es6/
+test/files/

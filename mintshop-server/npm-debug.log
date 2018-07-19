@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle gshop_server@0.0.0~prestart: gshop_server@0.0.0
+6 silly lifecycle gshop_server@0.0.0~prestart: no script for prestart, continuing
+7 info lifecycle gshop_server@0.0.0~start: gshop_server@0.0.0
+8 verbose lifecycle gshop_server@0.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle gshop_server@0.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\work\temp\react-vue视频\vue项目视频\code\gshop-server_final\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\SlikSvn\bin;E:\cordova-package\jdk1.8-64\bin;E:\cordova-package\android-sdk\platform-tools;E:\cordova-package\android-sdk\tools;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\WINDOWS\System32\OpenSSH\;C:\Users\Fei\AppData\Local\Microsoft\WindowsApps;C:\Users\Fei\AppData\Roaming\npm;E:\BaiduYunDownload\gradle-4.1\bin;C:\Users\Fei\AppData\Local\Programs\Python\Python35\Scripts;C:\Users\Fei\AppData\Local\Programs\Python\Python35;C:\Program Files\Microsoft VS Code\bin;D:\work\server\apache-tomcat-6.0.16\bin;D:\work\node\mongodb\bin;
+10 verbose lifecycle gshop_server@0.0.0~start: CWD: D:\work\temp\react-vue视频\vue项目视频\code\gshop-server_final
+11 silly lifecycle gshop_server@0.0.0~start: Args: [ '/d /s /c', 'nodemon ./bin/www' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1018:11)
+12 verbose stack     at process.kill (internal/process.js:190:13)
+12 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+13 verbose cwd D:\work\temp\react-vue视频\vue项目视频\code\gshop-server_final
+14 error Windows_NT 10.0.17134
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v6.10.1
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
