@@ -1,15 +1,18 @@
-/*与后台交互模块 （依赖已封装的ajax函数）
+/*
+与后台交互模块 （依赖已封装的ajax函数）
  */
 import ajax from './ajax'
+// const BASE_URL = 'http://local:4000'
+const BASE_URL = '/api'
 /**
  * 获取地址信息(根据经纬度串)
  * 这个接口的经纬度参数是在url路径里的，没有query参数
  */
-export const reqAddress = geohash => ajax(`/api/position/${geohash}`)
+export const reqAddress = geohash => ajax(`${BASE_URL}/position/${geohash}`)
 /**
  * 获取 msite 页面食品分类列表
  */
-export const reqCategorys = () => ajax('/api/index_category')
+export const reqCategorys = () => ajax(BASE_URL + '/index_category')
 /**
  * 获取 msite 商铺列表(根据query参数：经纬度)
  * 将经纬度两个数据作为一个参数对象传入
@@ -18,14 +21,14 @@ export const reqCategorys = () => ajax('/api/index_category')
 export const reqShops = ({
   latitude,
   longitude
-}) => ajax('/api/shops', {
+}) => ajax(BASE_URL + '/shops', {
   latitude,
   longitude
 })
 /**
  * 账号密码登录
  */
-export const reqPwdLogin = (name, pwd, captcha) => ajax('/api/login_pwd', {
+export const reqPwdLogin = (name, pwd, captcha) => ajax(BASE_URL + '/login_pwd', {
   name,
   pwd,
   captcha
@@ -33,21 +36,21 @@ export const reqPwdLogin = (name, pwd, captcha) => ajax('/api/login_pwd', {
 /**
  * 获取短信验证码
  */
-export const reqSendCode = phone => ajax('/api/sendcode', {
+export const reqSendCode = phone => ajax(BASE_URL + '/sendcode', {
   phone
 })
 /**
  * 手机号验证码登录
  */
-export const reqSmsLogin = (phone, code) => ajax('/api/login_sms', {
+export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {
   phone,
   code
 }, 'POST')
 /**
  * 获取用户信息(根据会话)
  */
-export const reqUser = () => ajax('/api/userinfo')
+export const reqUser = () => ajax(BASE_URL + '/userinfo')
 /**
  * 请求登出
  */
-export const reqLogout = () => ajax('/api/logout')
+export const reqLogout = () => ajax(BASE_URL + '/logout')

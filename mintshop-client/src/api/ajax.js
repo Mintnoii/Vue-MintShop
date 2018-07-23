@@ -1,6 +1,6 @@
 /*
 ajax 请求函数模块
-*/ 
+*/
 import axios from 'axios'
 /**
  * 向外部暴漏一个函数 ajax
@@ -8,10 +8,10 @@ import axios from 'axios'
  * @param {*} data 请求参数，默认为空对象
  * @param {*} type 请求方法，默认为GET
  */
-export default function ajax(url = '', data = {}, type = 'GET') {
+export default function ajax (url = '', data = {}, type = 'GET') {
   // 返回值 Promise对象 （异步返回的数据是response.data，而不是response）
   return new Promise(function (resolve, reject) {
-    //（利用axios）异步执行ajax请求
+    // （利用axios）异步执行ajax请求
     let promise // 这个内部的promise用来保存axios的返回值(promise对象)
     if (type === 'GET') {
       // 准备 url query 参数数据
@@ -30,9 +30,9 @@ export default function ajax(url = '', data = {}, type = 'GET') {
       promise = axios.post(url, data)
     }
     promise.then(response => {
-        // 成功回调resolve()
-        resolve(response.data)
-      })
+      // 成功回调resolve()
+      resolve(response.data)
+    })
       .catch(error => {
         // 失败回调reject()
         reject(error)

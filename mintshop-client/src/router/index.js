@@ -15,14 +15,14 @@ Vue.use(VueRouter)
 // 配置路由表并导出
 export default new VueRouter({
   //  去掉地址中的哈希#
-  mode: "history",
+  mode: 'history',
   routes: [
     {
-      path: "/",
-      redirect: "/msite"
+      path: '/',
+      redirect: '/msite'
     },
     {
-      path: "/msite",
+      path: '/msite',
       component: Msite,
       // 标识此路由是否显示FooterGuide
       meta: {
@@ -30,29 +30,29 @@ export default new VueRouter({
       }
     },
     {
-      path: "/search",
+      path: '/search',
       component: Search,
       meta: {
         showFooter: true
       }
     },
     {
-      path: "/order",
+      path: '/order',
       component: Order,
       meta: {
         showFooter: true
       }
     },
     {
-      path: "/profile",
+      path: '/profile',
       component: Profile,
       meta: {
         showFooter: true
       }
     },
     {
-      path: "/Login",
+      path: '/Login',
       component: Login
     }
   ]
-});
+})

@@ -10,8 +10,13 @@
 
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+import {reqCategorys} from './api'
 // 引入底部组件并注册
 export default {
+  async mounted () {
+    const result = await reqCategorys()
+    console.log(result)
+  },
   components: {
     FooterGuide
   }
