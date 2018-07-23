@@ -2,7 +2,7 @@
   <section class="msite">
     <!-- 首页头部title -->
     <!-- 使用 :title 来给头部组件传递数据 -->
-    <HeaderTop title="芝罘区鲁东大学北区(青年南路)">
+    <HeaderTop :title="address.name">
       <!-- 要使用slot="left"指定插入的插槽位置 -->
       <span class="header_search" slot="left">
         <i class="iconfont icon-sousuo"></i>
@@ -143,11 +143,15 @@ import 'swiper//dist/css/swiper.min.css'
 
 import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
 import ShopList from '../../components/ShopList/ShopList.vue'
-
+// 利用mapState语法糖去读取state对象
+import {mapState} from 'vuex'
 export default {
   components: {
     HeaderTop,
     ShopList
+  },
+  computed: {
+    ...mapState(['address'])
   },
   // 注意要在页面加载完成之后（mounted）再进行swiper的初始化
   mounted () {
