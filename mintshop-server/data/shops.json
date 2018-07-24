@@ -54,7 +54,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16018a5c08533.jpeg",
+    "image_path": "fish.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -136,7 +136,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "161e60bf5b85700.png",
+    "image_path": "bread.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -222,12 +222,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "16126fe59b83261.jpg",
-      "business_license_image": "16126fe55013260.jpg"
+      "catering_service_license_image": "meat.jpg",
+      "business_license_image": "meat.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "161690214004367.png",
+    "image_path": "meat.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -313,12 +313,12 @@
       "09:00/21:30"
     ],
     "license": {
-      "catering_service_license_image": "16127c429983306.jpg",
-      "business_license_image": "16127c423ae3305.jpg"
+      "catering_service_license_image": "rice.jpg",
+      "business_license_image": "rice.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16131b317533592.png",
+    "image_path": "rice.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -404,12 +404,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "161281e6ef33314.png",
-      "business_license_image": "161281e4a723313.jpg"
+      "catering_service_license_image": "fish.jpg",
+      "business_license_image": "fish.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16164d139ce4307.png",
+    "image_path": "fish.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -500,7 +500,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1612b1b689c3352.jpg",
+    "image_path": "bread.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -591,7 +591,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1612bca0ebf3396.png",
+    "image_path": "meat.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -674,7 +674,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1612c3b713f3438.jpg",
+    "image_path": "rice.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -768,12 +768,12 @@
       "05:30/06:30"
     ],
     "license": {
-      "catering_service_license_image": "1613129f6be3558.jpg",
-      "business_license_image": "1613129ee4a3557.jpg"
+      "catering_service_license_image": "fish.jpg",
+      "business_license_image": "fish.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "161312802433555.jpg",
+    "image_path": "fish.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -859,12 +859,12 @@
       "06:00/11:30"
     ],
     "license": {
-      "catering_service_license_image": "161313145043561.jpg",
-      "business_license_image": "16131312b733560.jpg"
+      "catering_service_license_image": "bread.jpg",
+      "business_license_image": "bread.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1614bab1ea73974.jpg",
+    "image_path": "bread.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -958,12 +958,12 @@
       "05:45/06:15"
     ],
     "license": {
-      "catering_service_license_image": "1613168204c3572.jpg",
-      "business_license_image": "161316806d63571.jpg"
+      "catering_service_license_image": "meat.jpg",
+      "business_license_image": "meat.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613167dd973570.jpg",
+    "image_path": "meat.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1054,7 +1054,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613191d8bc3579.PNG",
+    "image_path": "rice.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1140,12 +1140,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "16136ce209f3645.jpg",
-      "business_license_image": "16136cdffad3644.jpg"
+      "catering_service_license_image": "fish.jpg",
+      "business_license_image": "fish.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16136ce034e3643.jpg",
+    "image_path": "fish.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1231,12 +1231,12 @@
       "11:30/15:45"
     ],
     "license": {
-      "catering_service_license_image": "1613ac5ecbb3662.jpg",
-      "business_license_image": "1613ac5d99f3661.jpg"
+      "catering_service_license_image": "bread.jpg",
+      "business_license_image": "bread.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613ac5ba6b3660.jpg",
+    "image_path": "bread.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1322,12 +1322,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "1613caf47de3679.png",
-      "business_license_image": "1613caf430f3678.png"
+      "catering_service_license_image": "meat.jpg",
+      "business_license_image": "meat.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613caf14ab3677.png",
+    "image_path": "meat.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1413,12 +1413,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "1613cb057073682.png",
-      "business_license_image": "1613cb054b43681.png"
+      "catering_service_license_image": "rice.jpg",
+      "business_license_image": "rice.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1614efc2f693987.jpg",
+    "image_path": "rice.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1509,7 +1509,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613fc23d793695.png",
+    "image_path": "fish.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1586,12 +1586,12 @@
       "8:30/20:30"
     ],
     "license": {
-      "catering_service_license_image": "1613fd562343700.jpg",
-      "business_license_image": "1613fd56eba3699.png"
+      "catering_service_license_image": "bread.jpg",
+      "business_license_image": "bread.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613fd55ba03698.png",
+    "image_path": "bread.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1690,7 +1690,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1613fdfe1773703.png",
+    "image_path": "meat.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -1776,12 +1776,12 @@
       "06:30/22:45"
     ],
     "license": {
-      "catering_service_license_image": "161400760ee3715.jpg",
-      "business_license_image": "16140074a273714.jpg"
+      "catering_service_license_image": "rice.jpg",
+      "business_license_image": "rice.jpg"
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "1614007170f3713.jpg",
+    "image_path": "rice.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",

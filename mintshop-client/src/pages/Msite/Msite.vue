@@ -75,24 +75,24 @@ export default {
       const {categorys} = this
       // 2.准备一个空的二维数组--categorysArr
       const arr = []
-      for (let i = 0, len = categorys.length; i < len; i += 8) {
-        arr.push(categorys.slice(i, i + 8))
-      }
+      // for (let i = 0, len = categorys.length; i < len; i += 8) {
+      //   arr.push(categorys.slice(i, i + 8))
+      // }
       // 3.准备一个小数组--pages(最大长度为8)
-      // let minArr = []
+      let minArr = []
       // 4.遍历categorys得到处理后的二维数组catagorysArr
-      // categorys.forEach(data => {
-      //   // 如果当前小数组(pages)已经满了, 创建一个新的
-      //   if (minArr.length === 8) {
-      //     minArr = []
-      //   }
-      //   // 如果minArr是空的, 将小数组(pages)保存到大数组(categorysArr)中
-      //   if (minArr.length === 0) {
-      //     arr.push(minArr)
-      //   }
-      //   // 将当前分类信息保存到小数组(pages)中
-      //   minArr.push(data)
-      // })
+      categorys.forEach(data => {
+        // 如果当前小数组(pages)已经满了, 创建一个新的
+        if (minArr.length === 8) {
+          minArr = []
+        }
+        // 如果minArr是空的, 将小数组(pages)保存到大数组(categorysArr)中
+        if (minArr.length === 0) {
+          arr.push(minArr)
+        }
+        // 将当前分类信息保存到小数组(pages)中
+        minArr.push(data)
+      })
       return arr
     }
   },
@@ -133,6 +133,7 @@ export default {
   mounted () {
     // 忘记方法名时查看Action.js
     this.$store.dispatch('getCategorys')
+    this.$store.dispatch('getShops')
   }
 }
 </script>

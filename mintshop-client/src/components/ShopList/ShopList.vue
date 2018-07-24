@@ -1,14 +1,14 @@
 <template>
   <div class="shop_container">
     <ul class="shop_list">
-      <li class="shop_li border-1px">
+      <li class="shop_li border-1px" v-for="(shop,index) in shops" :key="index">
         <a>
           <div class="shop_left">
-            <img class="shop_img" src="./images/shop/1.jpg">
+            <img class="shop_img" :src="baseImgUrl + shop.image_path">
           </div>
           <div class="shop_right">
             <section class="shop_detail_header">
-              <h4 class="shop_title ellipsis">锄禾日当午，汗滴禾下土</h4>
+              <h4 class="shop_title ellipsis">{{shop.name}}</h4>
               <ul class="shop_detail_ul">
                 <li class="supports">保</li>
                 <li class="supports">准</li>
@@ -25,153 +25,21 @@
                   <span class="star-item off"></span>
                 </div>
                 <div class="rating_section">
-                  3.6
+                  {{shop.rating}}
                 </div>
                 <div class="order_section">
-                  月售106单
+                  月售{{shop.recent_order_num}}单
                 </div>
               </section>
               <section class="shop_rating_order_right">
-                <span class="delivery_style delivery_right">Mint专送</span>
+                <span class="delivery_style delivery_right">{{shop.delivery_mode.text}}</span>
               </section>
             </section>
             <section class="shop_distance">
               <p class="shop_delivery_msg">
-                <span>¥20起送</span>
+                <span>¥{{shop.float_minimum_order_amount}}起送</span>
                 <span class="segmentation">/</span>
-                <span>配送费约¥5</span>
-              </p>
-            </section>
-          </div>
-        </a>
-      </li>
-      <li class="shop_li border-1px">
-        <a>
-          <div class="shop_left">
-            <img class="shop_img" src="./images/shop/2.jpg">
-          </div>
-          <div class="shop_right">
-            <section class="shop_detail_header">
-              <h4 class="shop_title ellipsis">锄禾日当午，汗滴禾下土</h4>
-              <ul class="shop_detail_ul">
-                <li class="supports">保</li>
-                <li class="supports">准</li>
-                <li class="supports">票</li>
-              </ul>
-            </section>
-            <section class="shop_rating_order">
-              <section class="shop_rating_order_left">
-                <div class="star star-24">
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item off"></span>
-                </div>
-                <div class="rating_section">
-                  4.1
-                </div>
-                <div class="order_section">
-                  月售106单
-                </div>
-              </section>
-              <section class="shop_rating_order_right">
-                <span class="delivery_style delivery_right">Mint专送</span>
-              </section>
-            </section>
-            <section class="shop_distance">
-              <p class="shop_delivery_msg">
-                <span>¥20起送</span>
-                <span class="segmentation">/</span>
-                <span>配送费约¥5</span>
-              </p>
-            </section>
-          </div>
-        </a>
-      </li>
-      <li class="shop_li border-1px">
-        <a>
-          <div class="shop_left">
-            <img class="shop_img" src="./images/shop/3.jpg">
-          </div>
-          <div class="shop_right">
-            <section class="shop_detail_header">
-              <h4 class="shop_title ellipsis">锄禾日当午，汗滴禾下土</h4>
-              <ul class="shop_detail_ul">
-                <li class="supports">保</li>
-                <li class="supports">准</li>
-                <li class="supports">票</li>
-              </ul>
-            </section>
-            <section class="shop_rating_order">
-              <section class="shop_rating_order_left">
-                <div class="star star-24">
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item off"></span>
-                  <span class="star-item off"></span>
-                </div>
-                <div class="rating_section">
-                  3.2
-                </div>
-                <div class="order_section">
-                  月售106单
-                </div>
-              </section>
-              <section class="shop_rating_order_right">
-                <span class="delivery_style delivery_right">Mint专送</span>
-              </section>
-            </section>
-            <section class="shop_distance">
-              <p class="shop_delivery_msg">
-                <span>¥20起送</span>
-                <span class="segmentation">/</span>
-                <span>配送费约¥5</span>
-              </p>
-            </section>
-          </div>
-        </a>
-      </li>
-      <li class="shop_li border-1px">
-        <a>
-          <div class="shop_left">
-            <img class="shop_img" src="./images/shop/4.jpg">
-          </div>
-          <div class="shop_right">
-            <section class="shop_detail_header">
-              <h4 class="shop_title ellipsis">锄禾日当午，汗滴禾下土</h4>
-              <ul class="shop_detail_ul">
-                <li class="supports">保</li>
-                <li class="supports">准</li>
-                <li class="supports">票</li>
-              </ul>
-            </section>
-            <section class="shop_rating_order">
-              <section class="shop_rating_order_left">
-                <div class="star star-24">
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item on"></span>
-                  <span class="star-item half"></span>
-                  <span class="star-item off"></span>
-                </div>
-                <div class="rating_section">
-                  3.6
-                </div>
-                <div class="order_section">
-                  月售106单
-                </div>
-              </section>
-              <section class="shop_rating_order_right">
-                <span class="delivery_style delivery_right">Mint专送</span>
-              </section>
-            </section>
-            <section class="shop_distance">
-              <p class="shop_delivery_msg">
-                <span>¥20起送</span>
-                <span class="segmentation">/</span>
-                <span>配送费约¥5</span>
+                <span>配送费约¥{{shop.float_delivery_fee}}</span>
               </p>
             </section>
           </div>
@@ -180,6 +48,19 @@
     </ul>
   </div>
 </template>
+<script>
+import {mapState} from 'vuex'
+export default {
+  data () {
+    return {
+      baseImgUrl: 'http://owoccema2.bkt.clouddn.com/show/MintShop/'
+    }
+  },
+  computed: {
+    ...mapState(['shops'])
+  }
+}
+</script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"
   .shop_container
