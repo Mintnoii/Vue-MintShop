@@ -75,40 +75,64 @@ export default {
       const {categorys} = this
       // 2.准备一个空的二维数组--categorysArr
       const arr = []
-      // for (let i = 0, len = categorys.length; i < len; i += 8) {
-      //   arr.push(categorys.slice(i, i + 8))
-      // }
+      for (let i = 0, len = categorys.length; i < len; i += 8) {
+        arr.push(categorys.slice(i, i + 8))
+      }
       // 3.准备一个小数组--pages(最大长度为8)
-      let minArr = []
+      // let minArr = []
       // 4.遍历categorys得到处理后的二维数组catagorysArr
-      categorys.forEach(data => {
-        // 如果当前小数组(pages)已经满了, 创建一个新的
-        if (minArr.length === 8) {
-          minArr = []
-        }
-        // 如果minArr是空的, 将小数组(pages)保存到大数组(categorysArr)中
-        if (minArr.length === 0) {
-          arr.push(minArr)
-        }
-        // 将当前分类信息保存到小数组(pages)中
-        minArr.push(data)
-      })
+      // categorys.forEach(data => {
+      //   // 如果当前小数组(pages)已经满了, 创建一个新的
+      //   if (minArr.length === 8) {
+      //     minArr = []
+      //   }
+      //   // 如果minArr是空的, 将小数组(pages)保存到大数组(categorysArr)中
+      //   if (minArr.length === 0) {
+      //     arr.push(minArr)
+      //   }
+      //   // 将当前分类信息保存到小数组(pages)中
+      //   minArr.push(data)
+      // })
       return arr
+    }
+  },
+  watch: {
+    categorys (value) { // categorys数组中有数据了 但界面还没有异步更新
+      // 使用setTimeout可以实现效果, 但是时机不准确
+      /*
+      setTimeout(() => {
+        // 创建一个Swiper实例对象来实现轮播
+        new Swiper('.swiper-container', {
+          autoplay: true,
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        })
+      }, 100) */
+
+      // 在修改数据之后立即使用它，然后等待 DOM 更新。
+      this.$nextTick(() => {
+        // 一旦完成界面更新, 立即执行回调
+        new Swiper('.swiper-container', {
+          autoplay: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        })
+
+        // new BScroll('.miste-content-wrapper', {
+        //   click: true
+        // })
+      })
     }
   },
   // 注意要在页面加载完成之后（mounted）再进行swiper的初始化
   mounted () {
     // 忘记方法名时查看Action.js
     this.$store.dispatch('getCategorys')
-    // 创建一个swiper实例来实现轮播
-    new Swiper('.swiper-container', {
-      autoplay: true,
-      // 如果需要分页器
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
-    })
   }
 }
 </script>
