@@ -1,6 +1,6 @@
 <template>
   <div class="shop_container">
-    <ul class="shop_list">
+    <ul class="shop_list" v-if="shops.length">
       <li class="shop_li border-1px" v-for="(shop,index) in shops" :key="index">
         <a>
           <div class="shop_left">
@@ -38,6 +38,12 @@
             </section>
           </div>
         </a>
+      </li>
+    </ul>
+    <!-- 循环显示6个svg图片 -->
+    <ul v-else>
+      <li v-for="item in 6" :key="item">
+        <img src="./images/shop_back.svg" alt="back">
       </li>
     </ul>
   </div>

@@ -16,7 +16,7 @@
     <!--首页导航轮播图-->
     <nav class="msite_nav">
       <!-- swiper的容器div -->
-      <div class="swiper-container">
+      <div class="swiper-container" v-if="categorys.length">
         <!-- swiper的包裹层div -->
         <div class="swiper-wrapper">
           <!-- swiper的轮播div -->
@@ -32,6 +32,7 @@
         <!-- swiper轮播图圆点 -->
         <div class="swiper-pagination"></div>
       </div>
+      <img src="./images/msite_back.svg" alt="back" v-else>
     </nav>
     <!--首页附近商家列表-->
     <div class="msite_shop_list">
