@@ -22,10 +22,10 @@ exports.randomCode = randomCode;
 向指定号码发送指定验证码
  */
 function sendCode(phone, code, callback) {
-    var ACCOUNT_SID = '8aaf070855b647ab0155b9f80994058a';
-    var AUTH_TOKEN = 'aa8aa679414e49df8908ea5b3d043c24';
+    var ACCOUNT_SID = '8a216da864da60ef0164da6a1829000a';
+    var AUTH_TOKEN = '0be87f0da450476f897e85569426ac84';
     var Rest_URL = 'https://app.cloopen.com:8883';
-    var AppID = '8aaf070855b647ab0155b9f809f90590';
+    var AppID = '8a216da864da60ef0164da6a18910011';
     //1. 准备请求url
     /*
      1.使用MD5加密（账户Id + 账户授权令牌 + 时间戳）。其中账户Id和账户授权令牌根据url的验证级别对应主账户。

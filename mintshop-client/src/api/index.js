@@ -16,7 +16,7 @@ export const reqCategorys = () => ajax(BASE_URL + '/index_category')
 /**
  * 获取 msite 商铺列表(根据query参数：经纬度)
  * 将经纬度两个数据作为一个参数对象传入
- * 也可以两个数据分别传入ajax， 然后再放入一个对象参数内， 如下面的reqPwdLogin接口
+ * 也可以两个数据分别传入ajax， 然后再放入一个对象参数内， 如下面的手机号接口
  */
 export const reqShops = ({
   latitude,
@@ -28,7 +28,7 @@ export const reqShops = ({
 /**
  * 账号密码登录
  */
-export const reqPwdLogin = (name, pwd, captcha) => ajax(BASE_URL + '/login_pwd', {
+export const reqPwdLogin = ({name, pwd, captcha}) => ajax(BASE_URL + '/login_pwd', {
   name,
   pwd,
   captcha
