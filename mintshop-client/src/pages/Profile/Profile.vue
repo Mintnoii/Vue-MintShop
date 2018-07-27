@@ -4,17 +4,17 @@
       <HeaderTop title="我的"></HeaderTop>
       <section class="profile-number">
       <!-- 利用router-link实现到Login组件的跳转 -->
-        <router-link to="/Login" class="profile-link">
+        <router-link :to="userInfo._id ? '/userinfo': '/login'" class="profile-link">
           <div class="profile_image">
             <i class="iconfont icon-yonghuming"></i>
           </div>
           <div class="user-info">
-            <p class="user-info-top">{{userInfo.name || '登录/注册'}}</p>
+            <p class="user-info-top" v-if="!userInfo.phone" >{{userInfo.name || '登录/注册'}}</p>
             <p>
               <span class="user-icon">
                 <i class="iconfont icon-msnui-tel icon-mobile"></i>
               </span>
-              <span class="icon-mobile-number">暂无绑定手机号</span>
+              <span class="icon-mobile-number">{{userInfo.phone || '暂无绑定手机号'}}</span>
             </p>
           </div>
           <span class="arrow">

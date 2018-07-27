@@ -69,7 +69,7 @@ export default {
       code: '', // 短信验证码
       captcha: '', // 图形验证码
       alertText: '', // 提示文本
-      alertShow: false, // 是否显示警告框
+      alertShow: false // 是否显示警告框
     }
   },
   computed: {
@@ -95,11 +95,11 @@ export default {
       }
       // 发送ajax请求（向指定手机号发送验证码短信）
       const result = await reqSendCode(this.phone)
-      if(result.code === 1) { // 手机号验证失败
+      if (result.code === 1) { // 手机号验证失败
         // 显示提示
         this.showAlert(result.msg)
         // 停止计时
-        if(this.computeTime) {
+        if (this.computeTime) {
           this.computeTime = 0
           clearInterval(this.intervalId)
           this.intervalId = undefined
@@ -110,31 +110,30 @@ export default {
     async login () {
       let result
       // 前台表单验证
-      if(this.loginWay) {  // 短信登陆
+      if (this.loginWay) { // 短信登陆
         const {rightPhone, phone, code} = this
-        if(!this.rightPhone) {
+        if (!this.rightPhone) {
           // 手机号不正确
           this.showAlert('手机号不正确')
           return
-        } else if(!/^\d{6}$/.test(code)) {
+        } else if (!/^\d{6}$/.test(code)) {
           // 验证必须是6位数字
           this.showAlert('验证必须是6位数字')
           return
         }
         // 发送ajax请求短信登陆
         result = await reqSmsLogin(phone, code)
-
-      } else {// 密码登陆
+      } else { // 密码登陆
         const {name, pwd, captcha} = this
-        if(!this.name) {
+        if (!this.name) {
           // 用户名必须指定
           this.showAlert('用户名必须指定')
           return
-        } else if(!this.pwd) {
+        } else if (!this.pwd) {
           // 密码必须指定
           this.showAlert('密码必须指定')
           return
-        } else if(!this.captcha) {
+        } else if (!this.captcha) {
           // 验证码必须指定
           this.showAlert('验证码必须指定')
           return
@@ -144,17 +143,17 @@ export default {
       }
 
       // 停止计时
-      if(this.computeTime) {
+      if (this.computeTime) {
         this.computeTime = 0
         clearInterval(this.intervalId)
         this.intervalId = undefined
       }
 
       // 根据结果数据处理
-      if(result.code===0) {
+      if (result.code === 0) {
         const user = result.data
         // 将user保存到vuex的state
-        this.$store.dispatch('recordUser',user)
+        this.$store.dispatch('recordUser', user)
         // 去个人中心界面
         this.$router.replace('/profile')
       } else {
@@ -165,7 +164,7 @@ export default {
         this.showAlert(msg)
       }
     },
-    showAlert(alertText) {
+    showAlert (alertText) {
       this.alertShow = true
       this.alertText = alertText
     },
@@ -177,7 +176,7 @@ export default {
     // 获取一个新的图片验证码
     getCaptcha () {
       // 每次指定的src要不一样
-      this.$refs.captcha.src = 'http://localhost:4000/captcha?time='+Date.now()
+      this.$refs.captcha.src = 'http://localhost:4000/captcha?time=' + Date.now()
     }
   },
   components: {

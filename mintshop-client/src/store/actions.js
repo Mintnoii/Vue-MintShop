@@ -6,7 +6,8 @@ Action:通过操作mutation间接更新state的多个方法的对象
 import {
   reqAddress,
   reqCategorys,
-  reqShops
+  reqShops,
+  reqUserInfo
 } from '../api'
 import {
   RECEIVE_ADDRESS,
@@ -54,5 +55,17 @@ export default {
   // 同步记录用户信息
   recordUser ({commit}, userInfo) {
     commit(RECEIVE_USER_INFO, {userInfo})
+  },
+  // 异步获取用户信息
+  async getUserInfo ({
+    commit
+  }) {
+    const result = await reqUserInfo()
+    if (result.code === 0) {
+      const userInfo = result.data
+      commit(RECEIVE_USER_INFO, {
+        userInfo
+      })
+    }
   }
 }

@@ -49,7 +49,7 @@ export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {
 /**
  * 获取用户信息(根据会话)
  */
-export const reqUser = () => ajax(BASE_URL + '/userinfo')
+export const reqUserInfo = () => ajax(BASE_URL + '/userinfo')
 /**
  * 请求登出
  */

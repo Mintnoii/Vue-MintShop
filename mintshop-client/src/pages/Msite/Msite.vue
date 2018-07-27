@@ -4,14 +4,17 @@
     <!-- 使用 :title 来给头部组件传递数据 -->
     <HeaderTop :title="address.name">
       <!-- 要使用slot="left"指定插入的插槽位置 -->
-      <span class="header_search" slot="left">
+      <router-link class="header_search" slot="left" to="/search">
         <i class="iconfont icon-sousuo"></i>
-      </span>
-      <span class="header_login" slot="right">
-        <span class="header_login_text">
+      </router-link>
+      <router-link class="header_login" slot="right" :to="userInfo._id ? '/userinfo': '/login'">
+        <span class="header_login_text" v-if="!userInfo._id">
           登录|注册
         </span>
-      </span>
+        <span class="header_login_text" v-else>
+          <i class="iconfont icon-yonghuming"></i>
+        </span>
+      </router-link>
     </HeaderTop>
     <!--首页导航轮播图-->
     <nav class="msite_nav">
@@ -65,7 +68,7 @@ export default {
     ShopList
   },
   computed: {
-    ...mapState(['address', 'categorys']),
+    ...mapState(['address', 'categorys', 'userInfo']),
 
     /*
     根据categorys一维数组生成一个2维数组

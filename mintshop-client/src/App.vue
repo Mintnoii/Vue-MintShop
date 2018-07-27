@@ -9,7 +9,7 @@
 </template>
 
 <script>
-// import {mapActions} from 'vuex'
+import {mapActions} from 'vuex'
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 // 引入底部组件并注册
 export default {
@@ -18,12 +18,13 @@ export default {
     this.$store.dispatch('getAddress')
 
     // this.getAddress()
+    this.getUserInfo()
   },
   components: {
     FooterGuide
   },
   methods: {
-    // ...mapActions(['getAddress'])
+    ...mapActions(['getUserInfo'])
   }
 }
 </script>
