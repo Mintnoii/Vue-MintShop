@@ -151,13 +151,13 @@ export default {
       }
 
       // 根据结果数据处理
-      if(result.code===0) { //成功
+      if(result.code===0) {
         const user = result.data
         // 将user保存到vuex的state
-        // todo
+        this.$store.dispatch('recordUser',user)
         // 去个人中心界面
         this.$router.replace('/profile')
-      } else { // 失败
+      } else {
         // 显示新的图片验证码
         this.getCaptcha()
         // 显示警告提示

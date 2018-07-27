@@ -3,8 +3,17 @@ Action:通过操作mutation间接更新state的多个方法的对象
  */
 
 // 注意要引入api接口函数
-import {reqAddress, reqCategorys, reqShops} from '../api'
-import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS} from './mutation-types'
+import {
+  reqAddress,
+  reqCategorys,
+  reqShops
+} from '../api'
+import {
+  RECEIVE_ADDRESS,
+  RECEIVE_CATEGORYS,
+  RECEIVE_SHOPS,
+  RECEIVE_USER_INFO
+} from './mutation-types'
 export default {
   // 异步获取地址
   async getAddress ({commit, state}) {
@@ -41,5 +50,9 @@ export default {
       const shops = result.data
       commit(RECEIVE_SHOPS, {shops})
     }
+  },
+  // 同步记录用户信息
+  recordUser ({commit}, userInfo) {
+    commit(RECEIVE_USER_INFO, {userInfo})
   }
 }
