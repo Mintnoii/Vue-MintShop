@@ -18,34 +18,19 @@ export const reqCategorys = () => ajax(BASE_URL + '/index_category')
  * 将经纬度两个数据作为一个参数对象传入
  * 也可以两个数据分别传入ajax， 然后再放入一个对象参数内， 如下面的手机号接口
  */
-export const reqShops = ({
-  latitude,
-  longitude
-}) => ajax(BASE_URL + '/shops', {
-  latitude,
-  longitude
-})
+export const reqShops = ({latitude, longitude}) => ajax(BASE_URL + '/shops', {latitude, longitude})
 /**
  * 账号密码登录
  */
-export const reqPwdLogin = ({name, pwd, captcha}) => ajax(BASE_URL + '/login_pwd', {
-  name,
-  pwd,
-  captcha
-}, 'POST')
+export const reqPwdLogin = ({name, pwd, captcha}) => ajax(BASE_URL + '/login_pwd', {name, pwd, captcha}, 'POST')
 /**
  * 获取短信验证码
  */
-export const reqSendCode = phone => ajax(BASE_URL + '/sendcode', {
-  phone
-})
+export const reqSendCode = phone => ajax(BASE_URL + '/sendcode', {phone})
 /**
  * 手机号验证码登录
  */
-export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {
-  phone,
-  code
-}, 'POST')
+export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {phone, code}, 'POST')
 /**
  * 获取用户信息(根据会话)
  */
@@ -54,3 +39,15 @@ export const reqUserInfo = () => ajax(BASE_URL + '/userinfo')
  * 请求登出
  */
 export const reqLogout = () => ajax(BASE_URL + '/logout')
+/**
+ * 获取商家信息(下列请求由mock拦截并返回 不需要代理)
+ */
+export const reqShopInfo = () => ajax('/shop_info')
+/**
+ * 获取商家评价数组
+ */
+export const reqShopRatings = () => ajax('/shop_ratings')
+/**
+ * 获取商家商品数组
+ */
+export const reqShopGoods = () => ajax('/shop_goods')
