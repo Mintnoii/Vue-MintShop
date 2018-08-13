@@ -1,9 +1,64 @@
 <template>
   <div>
-    ShopGoods
+    <div class="goods">
+      <div class="menu-wrapper" ref="menuWrapper">
+        <!-- 菜单对应的是食物分类列表-->
+        <ul>
+         <!--current-->
+          <li class="menu-item" v-for="(good, index) in goods" :key="index">
+            <span class="text bottom-border-1px">
+              <img class="icon" :src="good.icon" v-if="good.icon">
+              {{good.name}}
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="foods-wrapper" ref="foodsWrapper">
+        <!-- 右侧的食物列表是根据左侧的分类列表展现的-->
+        <!-- 所以右侧是在一个分类标题列表里面嵌套着各类食物列表-->
+        <ul ref="foodsUl">
+          <li class="food-list-hook" v-for="(good, index) in goods" :key="index">
+            <h1 class="title">{{good.name}}</h1>
+            <ul>
+              <li class="food-item bottom-border-1px" v-for="(food, index) in good.foods"
+                  :key="index">
+                <div class="icon">
+                  <img width="57" height="57" :src="food.icon">
+                </div>
+                <div class="content">
+                  <h2 class="name">{{food.name}}</h2>
+                  <p class="desc">{{food.description}}</p>
+                  <div class="extra">
+                    <span class="count">月售{{food.sellCount}}份</span>
+                    <span>好评率{{food.rating}}%</span>
+                  </div>
+                  <div class="price">
+                    <span class="now">￥{{food.price}}</span>
+                    <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
+                  </div>
+                  <div class="cartcontrol-wrapper">
+                    CartControl
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 <script>
+import {mapState} from 'vuex'
+export default {
+  mounted () {
+    // 使用 axios 请求 mockjs 提供的接口
+    this.$store.dispatch('getShopGoods')
+  },
+  computed: {
+    ...mapState(['goods'])
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
