@@ -61,12 +61,8 @@ export default {
   mounted () {
     this.$store.dispatch('getShopGoods', () => { // 数据更新后执行
       this.$nextTick(() => { // 列表数据更新显示后执行
-        new BScroll('.menu-wrapper', {
-          click: true
-        })
-        new BScroll('.foods-wrapper', {
-          click: true
-        })
+        this._initScroll()
+        this._initTops()
       })
     })
   },
@@ -87,7 +83,48 @@ export default {
     }
   },
   methods: {
+    // 初始化滚动
+    _initScroll () {
+      // 列表显示之后创建
+      new BScroll('.menu-wrapper', {
+        click: true
+      })
+      this.foodsScroll = new BScroll('.foods-wrapper', {
+        probeType: 2, // 因为惯性滑动不会触发
+        click: true
+      })
 
+      // 给右侧列表绑定scroll监听
+      this.foodsScroll.on('scroll', ({x, y}) => {
+        console.log(x, y)
+        this.scrollY = Math.abs(y)
+      })
+      // 给右侧列表绑定scroll结束的监听
+      this.foodsScroll.on('scrollEnd', ({x, y}) => {
+        console.log('scrollEnd', x, y)
+        this.scrollY = Math.abs(y)
+      })
+    },
+    // 初始化tops
+    _initTops () {
+      // 1. 初始化tops
+      const tops = []
+      let top = 0
+      // 第一个li的top为0
+      tops.push(top)
+      // 2. 收集
+      // 在foods列表下找到所有分类的li
+      // this.$refs.foodsUl.getElementsByClassName('food-list-hook')
+      const lis = this.$refs.foodsUl.children
+      Array.prototype.slice.call(lis).forEach(li => {
+        top += li.clientHeight
+        tops.push(top)
+      })
+
+      // 3. 更新数据
+      this.tops = tops
+      console.log(tops)
+    }
   }
 }
 </script>
