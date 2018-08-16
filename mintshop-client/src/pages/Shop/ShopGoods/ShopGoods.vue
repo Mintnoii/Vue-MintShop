@@ -5,7 +5,7 @@
         <!-- 菜单对应的是食物分类列表-->
         <ul>
          <!--current-->
-          <li class="menu-item" v-for="(good, index) in goods" :key="index">
+          <li class="menu-item" v-for="(good, index) in goods" :class="{current: index===currentIndex}" :key="index">
             <span class="text bottom-border-1px">
               <img class="icon" :src="good.icon" v-if="good.icon">
               {{good.name}}
@@ -49,14 +49,45 @@
   </div>
 </template>
 <script>
+import BScroll from 'better-scroll'
 import {mapState} from 'vuex'
 export default {
+  data () {
+    return {
+      scrollY: 0, // 右侧 Y 轴滑动的坐标(越往下数值越小)
+      tops: [] // 包含右侧所有分类小列表的 top 值
+    }
+  },
   mounted () {
-    // 使用 axios 请求 mockjs 提供的接口
-    this.$store.dispatch('getShopGoods')
+    this.$store.dispatch('getShopGoods', () => { // 数据更新后执行
+      this.$nextTick(() => { // 列表数据更新显示后执行
+        new BScroll('.menu-wrapper', {
+          click: true
+        })
+        new BScroll('.foods-wrapper', {
+          click: true
+        })
+      })
+    })
   },
   computed: {
-    ...mapState(['goods'])
+    ...mapState(['goods']),
+
+    // 计算得到当前分类的下标
+    currentIndex () { // 初始和相关数据发生了变化
+      // 得到条件数据
+      const {scrollY, tops} = this
+      // 根据条件计算产生一个结果
+      const index = tops.findIndex((top, index) => {
+        // scrollY>=当前top && scrollY<下一个top
+        return scrollY >= top && scrollY < tops[index + 1]
+      })
+      // 返回结果
+      return index
+    }
+  },
+  methods: {
+
   }
 }
 </script>

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "better-scroll": "^1.12.6",
     "fastclick": "^1.0.6",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",
