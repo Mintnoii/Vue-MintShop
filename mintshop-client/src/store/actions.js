@@ -90,7 +90,7 @@ export default {
   },
 
   // 异步获取商家评价列表
-  async getShopRatings ({commit},callback) {
+  async getShopRatings ({commit}, callback) {
     const result = await reqShopRatings()
     if (result.code === 0) {
       const ratings = result.data

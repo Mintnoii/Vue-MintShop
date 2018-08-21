@@ -1172,7 +1172,10 @@
       "rateType": 1,
       "text": "",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
-      "recommend": []
+      "recommend": [
+        "娃娃菜炖豆腐",
+        "牛肉馅饼"
+      ]
     },
     {
       "username": "1******c",
@@ -1192,7 +1195,10 @@
       "rateType": 0,
       "text": "",
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
-      "recommend": []
+      "recommend": [
+        "娃娃菜炖豆腐",
+        "牛肉馅饼"
+      ]
     },
     {
       "username": "9******0",
