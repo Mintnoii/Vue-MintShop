@@ -19,7 +19,7 @@
         </div>
       </div>
       <transition name="move">
-        <div class="shopcart-list" v-show="listShow">
+        <div class="shopcart-list" v-show="isShow">
           <div class="list-header">
             <h1 class="title">购物车</h1>
             <span class="empty" @click="clearCart">清空</span>
@@ -39,7 +39,7 @@
       </transition>
 
     </div>
-    <div class="list-mask" v-show="listShow" @click="toggleShow"></div>
+    <div class="list-mask" v-show="isShow" @click="toggleShow"></div>
   </div>
 </template>
 
@@ -55,7 +55,32 @@ export default {
       isShow: false
     }
   },
+  watch: {
+    totalCount: function () {
+      // 如果总数量为0, 直接不显示
+      if (this.totalCount === 0) {
+        this.isShow = false
+        // return false
+      }
+    },
+    isShow: function () {
+      if (this.isShow) {
+        this.$nextTick(() => {
+          // 实现BScroll的实例是一个单例
+          if (!this.scroll) {
+            this.scroll = new BScroll('.list-content', {
+              click: true
+            })
+          } else {
+            console.log(555)
+            this.scroll.refresh() // 让滚动条刷新一下: 重新统计内容的高度
+          }
+        })
+      }
 
+      return this.isShow
+    }
+  },
   computed: {
     // 在购物车中获取到cartFoods的state 以及商家的info
     ...mapState(['cartFoods', 'info']),
@@ -79,29 +104,6 @@ export default {
       } else {
         return '去结算'
       }
-    },
-
-    listShow () {
-      // 如果总数量为0, 直接不显示
-      if (this.totalCount === 0) {
-        this.isShow = false
-        return false
-      }
-
-      if (this.isShow) {
-        this.$nextTick(() => {
-          // 实现BScroll的实例是一个单例
-          if (!this.scroll) {
-            this.scroll = new BScroll('.list-content', {
-              click: true
-            })
-          } else {
-            this.scroll.refresh() // 让滚动条刷新一下: 重新统计内容的高度
-          }
-        })
-      }
-
-      return this.isShow
     }
   },
 
