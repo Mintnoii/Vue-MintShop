@@ -9,9 +9,11 @@
 
 ## 2. 项目功能界面
 
-![Msite首页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Msite.png)![Search搜索页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Search.png)![Order订单页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Order.png)
+![Msite首页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Msite.png)![Order订单页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Order.png)
 
-![Profile个人页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Profile.png)![Food](http://owoccema2.bkt.clouddn.com/Readme/MintShop/food.png)![Inf](http://owoccema2.bkt.clouddn.com/Readme/MintShop/info.png)
+![Profile个人页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Profile.png)![Food](http://owoccema2.bkt.clouddn.com/Readme/MintShop/food.png)
+
+![Inf](http://owoccema2.bkt.clouddn.com/Readme/MintShop/info.png)
 
 ## 3. API接口文档
 
