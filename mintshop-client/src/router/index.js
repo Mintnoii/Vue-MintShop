@@ -4,15 +4,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 引入路由组件文件夹下的组件
-import Msite from '../pages/Msite/Msite.vue'
-import Search from '../pages/Search/Search.vue'
-import Order from '../pages/Order/Order.vue'
-import Profile from '../pages/Profile/Profile.vue'
+// import Msite from '../pages/Msite/Msite.vue'
+// import Search from '../pages/Search/Search.vue'
+// import Order from '../pages/Order/Order.vue'
+// import Profile from '../pages/Profile/Profile.vue'
+
 import Login from '../pages/Login/Login'
 import Shop from '../pages/Shop/Shop.vue'
 import ShopGoods from '../pages/Shop/ShopGoods/ShopGoods.vue'
 import ShopRatings from '../pages/Shop/ShopRatings/ShopRatings.vue'
 import ShopInfo from '../pages/Shop/ShopInfo/ShopInfo.vue'
+
+// 路由组件懒加载
+const Msite = () => import('../pages/Msite/Msite.vue')
+const Search = () => import('../pages/Search/Search.vue')
+const Order = () => import('../pages/Order/Order.vue')
+const Profile = () => import('../pages/Profile/Profile.vue')
 // 全局注册Vue-router组件
 Vue.use(VueRouter)
 
@@ -28,6 +35,7 @@ export default new VueRouter({
     {
       path: '/msite',
       component: Msite,
+      // 此时的Msite等都是返回路由组件的函数，只有请求对应的路由路径时(第一次)才会执行此函数并加载路由组件
       // 标识此路由是否显示FooterGuide
       meta: {
         showFooter: true
