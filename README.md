@@ -52,10 +52,9 @@
 
 ## 6. App演示截图
 
-![Msite首页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Msite.png)![Order订单页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Order.png)
-
-![Profile个人页](http://owoccema2.bkt.clouddn.com/Readme/MintShop/Profile.png)![Food](http://owoccema2.bkt.clouddn.com/Readme/MintShop/food.png)
-
-![Inf](http://owoccema2.bkt.clouddn.com/Readme/MintShop/info.png)
+Msite首页
+Profile个人页
+Food
+Info
 
 

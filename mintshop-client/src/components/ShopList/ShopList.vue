@@ -54,7 +54,7 @@ import Star from '../Star/Star.vue'
 export default {
   data () {
     return {
-      baseImgUrl: 'http://owoccema2.bkt.clouddn.com/show/MintShop/'
+      baseImgUrl: './images/'
     }
   },
   computed: {
